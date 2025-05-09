@@ -1,10 +1,10 @@
-# Research Agent
+# ResearchFlow Agent
 
-This repository contains a research agent application designed to
-facilitate paper research and slide generation. It consists of a
-backend powered by FastAPI and a frontend built with Streamlit.
+ResearchFlow Agent is an AI-assisted research workflow application for exploring papers, organizing findings, and generating presentation-ready slide material. It combines a FastAPI backend with a Streamlit frontend so research tasks can be run through an interactive interface while the workflow logic remains isolated in backend services.
 
-![ui-recording.gif](docs/assets/ui-recording.gif)./assets/research-agent.png)
+The project is designed around a practical research flow: submit a research topic, collect and process relevant context, summarize findings, and turn the output into structured material for presentation. The backend contains prompts, LLM and embedding services, workflow definitions, configuration, and API endpoints. The frontend provides the user-facing pages for running the workflow and reviewing generated results.
+
+![ResearchFlow Agent UI](docs/assets/ui-recording.gif)
 
 ## Project Structure
 
@@ -13,7 +13,7 @@ backend powered by FastAPI and a frontend built with Streamlit.
 │   ├── prompts                 # Prompts used in the workflow 
 │   ├── services                # Services for LLMs and embeddings
 │   ├── utils                   # Utility functions
-│   ├── workflows               # Workflow difinitions
+│   ├── workflows               # Workflow definitions
 │   ├── config.py               # Configuration settings
 │   ├── models.py               # Pydantic models
 │   ├── main.py                 # Main entry point for FastAPI
@@ -42,7 +42,6 @@ backend powered by FastAPI and a frontend built with Streamlit.
    ```bash
    git clone <repository-url>
    cd <repository-directory>
-   # install dependencies
    poetry install
    ```
 
@@ -62,7 +61,4 @@ backend powered by FastAPI and a frontend built with Streamlit.
    - Backend: API documentation available at `http://localhost:8000/docs`
 ## Usage
 
-- **Summary and Slide Generation**: Navigate to the "Slide Generation" page in the Streamlit app, enter 
-the research topic query, and click the submit button to start the process.
-
-
+- **Summary and Slide Generation**: Navigate to the "Slide Generation" page in the Streamlit app, enter the research topic query, and click the submit button to start the process.
